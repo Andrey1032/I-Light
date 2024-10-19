@@ -81,7 +81,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
 
-            height: 2px;
+            height: 3px;
             width: 100%;
 
             background-color: var(--color-145);
@@ -100,11 +100,12 @@
     }
 
     .ham-menu__input:checked ~ .ham-menu__icon-menu {
+        .ham-menu__span {
+            height: 5px;
+            width: 75%;
+        }
         .ham-menu__span:nth-child(1) {
             top: 50%;
-
-            height: 4px;
-            width: 50%;
             transform: translate(-50%, -50%) rotate(-135deg);
         }
         .ham-menu__span:nth-child(2) {
@@ -112,9 +113,6 @@
         }
         .ham-menu__span:nth-child(3) {
             top: 50%;
-
-            height: 4px;
-            width: 50%;
             transform: translate(-50%, -50%) rotate(135deg);
         }
     }
