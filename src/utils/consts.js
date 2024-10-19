@@ -1,3 +1,4 @@
+export const HOME_ROUTE = '/' // главная
 export const CATALOG_ROUTE = '/catalog' // каталог
 export const ABOUT_COMPANY_ROUTE = '/about' // о компании
 export const SERVICES_ROUTE = '/services' // услуги

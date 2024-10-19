@@ -3,10 +3,10 @@ import { publicRoutes } from "./utils/routes";
 import Navbar from "./components/Navbar/Navbar"
 import Main from "./components/Main/Main"
 import Footer from "./components/Footer/Footer"
-
+import { HOME_ROUTE } from "./utils/consts"
 const router = createBrowserRouter([
   {
-    path: "/i-light",
+    path: HOME_ROUTE,
     element: <>
       <Navbar />
       <Main>
