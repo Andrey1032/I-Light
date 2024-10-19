@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer"
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/i-light",
     element: <>
       <Navbar />
       <Main>
