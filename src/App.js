@@ -1,17 +1,16 @@
 import { createBrowserRouter, Link, Outlet, RouterProvider } from "react-router-dom";
 import { publicRoutes } from "./utils/routes";
 import Navbar from "./components/Navbar/Navbar"
-import Main from "./components/Main/Main"
 import Footer from "./components/Footer/Footer"
-import { HOME_ROUTE } from "./utils/consts"
+import { ABOUT_COMPANY_ROUTE } from "./utils/consts"
 const router = createBrowserRouter([
   {
-    path: HOME_ROUTE,
+    path: ABOUT_COMPANY_ROUTE,
     element: <>
       <Navbar />
-      <Main>
+      <main>
         <Outlet />
-      </Main>
+      </main>
       <Footer />
     </>,
     errorElement: <div><h2>Страница не существует</h2><Link to={"/"}>Перейти на главную страницу</Link></div>,

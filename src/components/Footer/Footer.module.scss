@@ -1,3 +1,112 @@
-.foter {
+.footer {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        "logo catalog services contacts"
+        "copyright catalog services contacts";
+    justify-content: space-around;
+    grid-template-rows: 70px auto;
+    padding: 51px 0.5vw;
+    background-color: var(--color-148);
+    color: var(--color-white);
+    &__logo {
+        grid-area: logo;
+    }
+    &__copyright {
+        grid-area: copyright;
+        font-size: 11px;
+        font-weight: 500;
+    }
 
+    &__menu {
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 6px;
+
+        &:nth-child(3) {
+            grid-area: catalog;
+        }
+        &:nth-child(4) {
+            grid-area: services;
+            gap: 0.8em;
+        }
+        &:nth-child(5) {
+            grid-area: contacts;
+        }
+        // &:first-child {
+        //     gap: 24px;
+        // }
+    }
+    &__link {
+        opacity: 1;
+        color: inherit;
+    }
+    &__text {
+        font-size: 14px;
+    }
+
+    .footer__text_bold {
+        font-weight: 600;
+    }
+    .footer__link_hover-ul {
+        @media (hover: hover) {
+            &:hover {
+                text-decoration: underline;
+                color: var(--color-145);
+            }
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .footer {
+        padding: 20px 10px;
+        display: grid;
+        grid-template-areas:
+            "logo logo"
+            "catalog services"
+            "contacts contacts"
+            "copyright copyright";
+        row-gap: 20px;
+        grid-template-rows: 50px auto;
+        grid-template-columns: 50% auto;
+        &__menu {
+            &:last-child {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-areas:
+                    "title title"
+                    "place phone"
+                    "email email";
+                p {
+                    grid-area: title;
+                }
+                .footer__link:nth-child(2) {
+                    grid-area: place;
+                    justify-content: center;
+                }
+                .footer__link:nth-child(3) {
+                    grid-area: phone;
+                    justify-content: center;
+                }
+                .footer__link:nth-child(4) {
+                    grid-area: email;
+                    justify-content: center;
+                }
+            }
+        }
+        &__copyright {
+            width: 100%;
+            border-top: 1px solid var(--color-white);
+            padding-top: 15px;
+            text-align: center;
+        }
+        &__text {
+            font-size: 12px;
+        }
+        .footer__text_fs-14 {
+            font-size: 14px;
+        }
+    }
 }

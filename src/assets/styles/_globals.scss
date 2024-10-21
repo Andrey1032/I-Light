@@ -1,0 +1,8 @@
+html,
+body {
+    max-height: 100vh;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}

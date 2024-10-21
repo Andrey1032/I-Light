@@ -1,3 +1,5 @@
 @import "../../components/Navbar/Navbar.module.scss";
 @import "../../components/Footer/Footer.module.scss";
-@import "./mixins", "./normalize", "./variables";
+@import "../../pages/AboutCompanyPage/AboutCompanyPage.module.scss";
+@import "../../pages/CompanyServicesPage/CompanyServicesPage.module.scss";
+@import "./mixins", "./normalize", "./variables", "./globals";

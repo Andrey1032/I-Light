@@ -1,6 +1,5 @@
-export const HOME_ROUTE = '/' // главная
 export const CATALOG_ROUTE = '/catalog' // каталог
-export const ABOUT_COMPANY_ROUTE = '/about' // о компании
+export const ABOUT_COMPANY_ROUTE = '/' // о компании
 export const SERVICES_ROUTE = '/services' // услуги
 export const CARD_ROUTE = '/card' // услуги
 export const BASKET_ROUTE = '/basket' // корзина

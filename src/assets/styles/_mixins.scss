@@ -1,15 +1,15 @@
-@mixin link-hover-focus($color) {
+@mixin link-hover-focus($color, $time: 0.2s) {
     p::after {
         content: "";
         display: block;
         position: absolute;
         bottom: -4px;
         left: 0;
-        height: 2px;
+        height: 1px;
         width: 100%;
         background-color: $color;
         transform: scaleX(0) scaleY(0);
-        transition: all 0.2s ease-in-out;
+        transition: all $time ease-in-out;
     }
     @media (hover: hover) {
         &:hover p::after {

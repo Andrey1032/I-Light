@@ -4,46 +4,80 @@ import { ReactComponent as IconPlus } from "../../assets/files/icon-plus.svg";
 import { ReactComponent as IconPhone } from "../../assets/files/icon-phone.svg";
 import { ReactComponent as IconEmail } from "../../assets/files/icon-email.svg";
 import { Link } from "react-router-dom";
+import { ABOUT_COMPANY_ROUTE, SERVICES_ROUTE } from "../../utils/consts";
 
 export default function Navbar() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
-    console.log(isOpenMenu);
     return (
         <header>
             <nav className={isOpenMenu ? "navbar navbar-active" : "navbar"}>
-                <img className="logo navbar__logo" src={logo} alt="logo" />
+                <Link
+                    to={ABOUT_COMPANY_ROUTE}
+                    onClick={() => setIsOpenMenu(false)}
+                >
+                    <img className="logo navbar__logo" src={logo} alt="logo" />
+                </Link>
 
-                <div className="navbar__menu">
-                    <Link to={"/"} className="navbar__link">
+                <div className="menu navbar__menu">
+                    <Link
+                        to={ABOUT_COMPANY_ROUTE}
+                        className="menu__link"
+                        onClick={() => setIsOpenMenu(false)}
+                    >
                         <p>О компании</p>
                     </Link>
-                    <Link to={"/"} className="navbar__link">
+                    <Link
+                        to={SERVICES_ROUTE}
+                        className="menu__link"
+                        onClick={() => setIsOpenMenu(false)}
+                    >
                         <p>Услуги</p>
                     </Link>
-                    <Link to={"/"} className="navbar__link">
+                    <Link
+                        to={"/"}
+                        className="menu__link"
+                        onClick={() => setIsOpenMenu(false)}
+                    >
                         <p>Проекты</p>
                     </Link>
-                    <Link to={"/"} className="navbar__link">
+                    <Link
+                        to={"/"}
+                        className="menu__link"
+                        onClick={() => setIsOpenMenu(false)}
+                    >
                         <p>Доставка и оплата</p>
                     </Link>
-                    <Link to={"/"} className="navbar__link">
+                    <Link
+                        to={"/"}
+                        className="menu__link"
+                        onClick={() => setIsOpenMenu(false)}
+                    >
                         <p>Контакты</p>
                     </Link>
                     <Link
                         to={"/"}
-                        className="navbar__link navbar__link_selection"
+                        className="menu__link menu__link_selection"
+                        onClick={() => setIsOpenMenu(false)}
                     >
                         <p>Подборка</p>
-                        <IconPlus className="navbar__link-icon" />
+                        <IconPlus className="menu__link-icon" />
                     </Link>
                 </div>
-                <div className="navbar__menu">
-                    <Link to={"/"} className="navbar__link navbar__link_email">
-                        <IconEmail className="navbar__link-icon" />
+                <div className="navbar__menu menu">
+                    <Link
+                        to={"/"}
+                        className="menu__link menu__link_email"
+                        onClick={() => setIsOpenMenu(false)}
+                    >
+                        <IconEmail className="menu__link-icon" />
                         <p>info@i-lights.ru</p>
                     </Link>
-                    <Link to={"/"} className="navbar__link navbar__link_phone">
-                        <IconPhone className="navbar__link-icon" />
+                    <Link
+                        to={"/"}
+                        className="menu__link menu__link_phone"
+                        onClick={() => setIsOpenMenu(false)}
+                    >
+                        <IconPhone className="menu__link-icon" />
                         <p>+7 (495) 233 55 57</p>
                     </Link>
                 </div>
