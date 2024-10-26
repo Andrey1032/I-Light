@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import logo from "../../assets/files/logo.png";
-import { ReactComponent as IconPlus } from "../../assets/files/icon-plus.svg";
-import { ReactComponent as IconPhone } from "../../assets/files/icon-phone.svg";
-import { ReactComponent as IconEmail } from "../../assets/files/icon-email.svg";
+import { ReactComponent as IconPlus } from "../../assets/files/icons/icon-plus.svg";
+import { ReactComponent as IconPhone } from "../../assets/files/icons/icon-phone.svg";
+import { ReactComponent as IconEmail } from "../../assets/files/icons/icon-email.svg";
 import { Link } from "react-router-dom";
-import { ABOUT_COMPANY_ROUTE, SERVICES_ROUTE } from "../../utils/consts";
+import { ABOUT_COMPANY_ROUTE, HOME_ROUTE, SERVICES_ROUTE } from "../../utils/consts";
 
 export default function Navbar() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -12,7 +12,7 @@ export default function Navbar() {
         <header>
             <nav className={isOpenMenu ? "navbar navbar-active" : "navbar"}>
                 <Link
-                    to={ABOUT_COMPANY_ROUTE}
+                    to={HOME_ROUTE}
                     onClick={() => setIsOpenMenu(false)}
                 >
                     <img className="logo navbar__logo" src={logo} alt="logo" />

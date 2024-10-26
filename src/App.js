@@ -2,10 +2,10 @@ import { createBrowserRouter, Link, Outlet, RouterProvider } from "react-router-
 import { publicRoutes } from "./utils/routes";
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
-import { ABOUT_COMPANY_ROUTE } from "./utils/consts"
+import { HOME_ROUTE } from "./utils/consts"
 const router = createBrowserRouter([
   {
-    path: ABOUT_COMPANY_ROUTE,
+    path: HOME_ROUTE,
     element: <>
       <Navbar />
       <main>
