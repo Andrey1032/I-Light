@@ -14,39 +14,39 @@ export default function AccordionItem({
             className={
                 checker
                     ? isActive
-                        ? "catalog-menu__item active checker"
-                        : "catalog-menu__item checker"
+                        ? "accordion-menu__item active checker"
+                        : "accordion-menu__item checker"
                     : isActive
-                    ? "catalog-menu__item active"
-                    : "catalog-menu__item"
+                    ? "accordion-menu__item active"
+                    : "accordion-menu__item"
             }
             onClick={setIsActive}
         >
             {icon && (
                 <img
                     src={data?.icon}
-                    className="catalog-menu__icon"
+                    className="accordion-menu__icon"
                     alt=""
                 ></img>
             )}
-            <div className="catalog-menu__title">
+            <div className="accordion-menu__title">
                 <p>{data.title}</p>
                 {checker && (
                     <div
                         className={
                             isActive
-                                ? "catalog-menu__checker active"
-                                : "catalog-menu__checker"
+                                ? "accordion-menu__checker active"
+                                : "accordion-menu__checker"
                         }
                     >
                         +
                     </div>
                 )}
             </div>
-            <div className="catalog-menu__content">
-                <p className="catalog-menu__decription">{data.decription}</p>
+            <div className="accordion-menu__content">
+                <p className="accordion-menu__decription">{data.decription}</p>
                 {button && (
-                    <Link to="" className="catalog-menu__link">
+                    <Link to="" className="accordion-menu__link">
                         Перейти в каталог
                     </Link>
                 )}

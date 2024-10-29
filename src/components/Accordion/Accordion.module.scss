@@ -1,8 +1,7 @@
-.catalog-menu {
+.accordion-menu {
     &__item {
         cursor: pointer;
         display: flex;
-        flex-grow: auto;
         flex-direction: column;
         justify-content: start;
         overflow: hidden;
@@ -16,11 +15,14 @@
         }
         &.checker {
             display: grid;
-            grid-template-columns: 100px calc(96vw - 100px);
+            column-gap: 50px;
             grid-template-areas:
                 "ic title"
                 "ic content";
         }
+    }
+    &__item.checker &__content {
+        margin-top: 0;
     }
     &__item.active &__content {
         height: 100%;
@@ -31,7 +33,6 @@
     }
     &__content {
         grid-area: content;
-        margin-top: 20px;
         display: flex;
         flex-direction: column;
         justify-content: start;

@@ -1,0 +1,35 @@
+.menu-catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    &__list {
+        margin-top: 60px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        gap: 20px;
+    }
+}
+.btn {
+    cursor: pointer;
+    width: 214px;
+    border-radius: 2px;
+    padding: 14px 0;
+    text-align: center;
+    background-color: var(--color-145);
+
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-148);
+    border: 2px solid transparent;
+
+    transition: all 0.15s;
+
+    @media (hover: hover) {
+        &:hover {
+            border: 2px solid var(--color-145);
+            background-color: transparent;
+        }
+    }
+}

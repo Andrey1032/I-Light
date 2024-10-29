@@ -9,7 +9,7 @@ export default function Accordion({
 }) {
     const [isActive, setIsActive] = useState(0);
     return (
-        <div className="section__catalog-menu catalog-menu">
+        <div className="section__accordion-menu accordion-menu">
             {data?.map((dataItem, id) => (
                 <AccordionItem
                     key={id}

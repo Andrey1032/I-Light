@@ -1,14 +1,16 @@
 .footer {
-    position: relative;
-    display: grid;
-    grid-template-areas:
-        "logo catalog services contacts"
-        "copyright catalog services contacts";
-    justify-content: space-around;
-    grid-template-rows: 70px auto;
-    padding: 51px 0.5vw;
+    padding: 51px 0;
     background-color: var(--color-148);
     color: var(--color-white);
+    &__container {
+        position: relative;
+        display: grid;
+        grid-template-areas:
+            "logo catalog services contacts"
+            "copyright catalog services contacts";
+        justify-content: space-around;
+        grid-template-rows: 70px auto;
+    }
     &__logo {
         grid-area: logo;
     }
@@ -61,16 +63,18 @@
 
 @media (max-width: 769px) {
     .footer {
-        padding: 20px 10px;
-        display: grid;
-        grid-template-areas:
-            "logo logo"
-            "catalog services"
-            "contacts contacts"
-            "copyright copyright";
-        row-gap: 20px;
-        grid-template-rows: 50px auto;
-        grid-template-columns: 50% auto;
+        &__container {
+            padding: 20px 0;
+            display: grid;
+            grid-template-areas:
+                "logo logo"
+                "catalog services"
+                "contacts contacts"
+                "copyright copyright";
+            row-gap: 20px;
+            grid-template-rows: 50px auto;
+            grid-template-columns: 50% auto;
+        }
         &__menu {
             &:last-child {
                 display: grid;
