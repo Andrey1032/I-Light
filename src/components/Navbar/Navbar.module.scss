@@ -190,7 +190,10 @@
 
             .navbar {
                 &__logo {
-                    display: none;
+                    position: absolute;
+                    top: 5px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
                 &__menu {
                     display: flex;

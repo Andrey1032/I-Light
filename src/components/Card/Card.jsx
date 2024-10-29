@@ -24,8 +24,8 @@ export default function Card({ data }) {
                 <div className="card__info">
                     <div className="card__title">{data.title}</div>
                     <ul className="card__features">
-                        {data.features?.map((feature) => (
-                            <li className="card__features-item">{feature}</li>
+                        {data.features?.map((feature, id) => (
+                            <li key={id} className="card__features-item">{feature}</li>
                         ))}
                     </ul>
                     <div className="card__price">

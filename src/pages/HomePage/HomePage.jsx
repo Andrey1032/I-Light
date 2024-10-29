@@ -197,32 +197,36 @@ export default function HomePage() {
                     <div className="section__content">
                         <Accordion data={dataCatalog} button={true}></Accordion>
                         <table className="section__images">
-                            <tr>
-                                <td className="section__img"></td>
-                                <td className="section__img section__img_center">
-                                    <Link className="section__img-link">
-                                        Arco
-                                    </Link>
-                                </td>
-                                <td className="section__img"></td>
-                            </tr>
-                            <tr>
-                                <td className="section__img">
-                                    <Link className="section__img-link">
-                                        Evo M
-                                    </Link>
-                                </td>
-                                <td className="section__img section__img_center">
-                                    <Link className="section__img-link">
-                                        Evo L
-                                    </Link>
-                                </td>
-                                <td className="section__img">
-                                    <Link className="section__img-link">
-                                        Alfa
-                                    </Link>
-                                </td>
-                            </tr>
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td className="section__img"></td>
+                                    <td className="section__img section__img_center">
+                                        <Link className="section__img-link">
+                                            Arco
+                                        </Link>
+                                    </td>
+                                    <td className="section__img"></td>
+                                </tr>
+                                <tr>
+                                    <td className="section__img">
+                                        <Link className="section__img-link">
+                                            Evo M
+                                        </Link>
+                                    </td>
+                                    <td className="section__img section__img_center">
+                                        <Link className="section__img-link">
+                                            Evo L
+                                        </Link>
+                                    </td>
+                                    <td className="section__img">
+                                        <Link className="section__img-link">
+                                            Alfa
+                                        </Link>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot></tfoot>
                         </table>
                     </div>
                 </div>
@@ -248,9 +252,9 @@ export default function HomePage() {
             <section className="section">
                 <div className="container">
                     <div className="section__content section__content_download">
-                        <IconFile className="section__title-img" />
                         <div className="subtitle">
                             <p>Файлы для скачивания</p>
+                            <IconFile className="section__title-img" />
                         </div>
                         <List
                             items={[

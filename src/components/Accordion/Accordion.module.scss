@@ -19,6 +19,10 @@
             grid-template-areas:
                 "ic title"
                 "ic content";
+            grid-template-rows: auto 0px;
+            &.active {
+                grid-template-rows: auto 100%;
+            }
         }
     }
     &__item.checker &__content {
@@ -43,11 +47,12 @@
         grid-area: title;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         font-size: 14px;
         font-weight: 700;
     }
     &__decription {
-        width: 80%;
+        width: 90%;
         font-size: 14px;
         font-weight: 400;
         color: var(--color-149);
@@ -62,6 +67,7 @@
         background-color: var(--color-148);
     }
     &__checker {
+        margin-left: 10px;
         font-size: 24px;
         color: var(--color-145);
         transition: all 0.3s;
@@ -73,5 +79,21 @@
         grid-area: ic;
         width: 33px;
         height: 33px;
+    }
+}
+
+@media (max-width: 769px) {
+    .accordion-menu {
+        &__item {
+            &.checker {
+                column-gap: 20px;
+                grid-template-areas:
+                    "ic title"
+                    "content content";
+            }
+        }
+        &__item.active.checker &__content {
+            margin-top: 10px;
+        }
     }
 }

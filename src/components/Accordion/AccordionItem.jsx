@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { Link } from "react-router-dom";
 
 export default function AccordionItem({
@@ -9,6 +9,7 @@ export default function AccordionItem({
     button,
     checker,
 }) {
+    const key = useId();
     return (
         <div
             className={
