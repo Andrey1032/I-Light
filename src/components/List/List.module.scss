@@ -44,6 +44,23 @@
         font-weight: 700;
         color: var(--color-144);
     }
-    &__icon-btn {
+}
+@media (max-width: 769px) {
+    .list {
+        max-height: none;
+        overflow-y: auto;
+        padding-right: 0;
+
+        &__item-title {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        &__buttons {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &__btn {
+            display: none;
+        }
     }
 }

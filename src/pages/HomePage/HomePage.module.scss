@@ -295,3 +295,11 @@
         line-height: 30px;
     }
 }
+@media (max-width: 769px) {
+    .section__content {
+        margin: 0;
+    }
+    .section__content_download {
+        margin-top: 0;
+    }
+}
